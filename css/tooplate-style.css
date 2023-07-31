@@ -1,6 +1,8 @@
 :root {
-	--color-principal: #B4BEE2;
-	--color-secundario: #E36C2A;
+	/* --color-principal: #B4BEE2;
+	--color-secundario: #E36C2A; */
+	--color-principal: #E36C2A;
+	--color-secundario:#B4BEE2 ;
 	--color-terciario: #231F20;
 }
 
@@ -20,7 +22,7 @@ p {
 }
 .primary-button a {
 	display: inline-block;
-	background-color: #a2cf8d;
+	background-color: var(--color-principal);
 	padding: 12px 18px;
 	color: #fff;
 	font-size: 11px;
@@ -32,7 +34,7 @@ p {
 	transition: all 0.5s;
 }
 .primary-button a:hover {
-	background-color: #5c9d7d;
+	background-color: var(--color-secundario);
 }
 .white-button a {
 	display: inline-block;
@@ -161,13 +163,13 @@ p {
 }
 .navbar-inverse .navbar-toggle {
 	margin-top: 22px;
-    border-color: #a2cf8d;
-    background-color: #a2cf8d;
+    border-color: var(--color-principal);
+    background-color: var(--color-principal);
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-	background-color: #a2cf8d;
+	background-color: var(--color-principal);
 }
-bootstrap.min.css:5
+
 .navbar-toggle {
     position: relative;
     float: right;
@@ -251,7 +253,7 @@ ul.cd-hero-slider {
 }
 
 .service-item:hover {
-	background-color: #a2cf8d;
+	background-color: var(--color-principal);
 }
 
 .service-item h4 {
@@ -381,7 +383,7 @@ ul.cd-hero-slider {
 }
 
 .filter-categories ul li.active span {
-  color: #a2cf8d;
+  color: var(--color-principal);
 }
 
 .project-item {
@@ -397,6 +399,8 @@ ul.cd-hero-slider {
 .project-item .thumb img {
 	width: 100%;
 	overflow: hidden;
+	height: 250px;
+    object-fit: cover;
 }
 
 .project-item .hover-effect {
@@ -418,13 +422,13 @@ ul.cd-hero-slider {
 	height: 46px;
 	background-color: #fff;
 	line-height: 46px;
-	color: #a2cf8d;
+	color: var(--color-principal);
 	border-radius: 50%;
 	font-size: 18px;
 }
 
 .project-item .hover-effect i:hover {
-	background-color: #5c9d7d;
+	background-color: var(--color-secundario);
 	color: #fff;
 	transition: all 0.5s;
 }
@@ -438,9 +442,7 @@ ul.cd-hero-slider {
 /* BLOG */
 
 #blog {
-	background-image: url(../img/blog-bg.png);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: var(--color-secundario);
 	width: 100%;
 }
 
@@ -468,6 +470,8 @@ ul.cd-hero-slider {
 .blog-item img {
 	width: 100%;
 	overflow: hidden;
+	object-fit: cover;
+    height: 500px;
 }
 
 .blog-item .thumb {
@@ -522,11 +526,11 @@ ul.cd-hero-slider {
 	line-height: 44px;
 	color: #fff;
 	text-align: center;
-	background-color: #a2cf8d;
+	background-color: var(--color-principal);
 }
 
 .pop span:hover, .pop2 span:hover, .pop3 span:hover {
-	background-color: #5c9d7d;
+	background-color: var(--color-secundario);
 	transition: all 0.5s;
 }
 
@@ -548,7 +552,7 @@ ul.cd-hero-slider {
 .fact-item .counter {
 	font-size: 24px;
 	font-weight: 700;
-	color: #a2cf8d;
+	color: var(--color-principal);
 }
 
 .fact-item span {
@@ -620,7 +624,7 @@ ul.cd-hero-slider {
 
 #contact button {
 	display: inline-block;
-	background-color: #a2cf8d;
+	background-color: var(--color-principal);
 	padding: 12px 18px;
 	color: #fff;
 	font-size: 11px;
@@ -633,7 +637,7 @@ ul.cd-hero-slider {
 
 #contact button:hover {
 	color: #fff;
-	background-color: #5c9d7d;
+	background-color: var(--color-secundario);
 	transition: all 0.3s;
 }
 
@@ -655,7 +659,7 @@ footer p {
 footer em {
 	font-style: normal;
 	font-weight: 700;
-	color: #a2cf8d;
+	color: var(--color-principal);
 }
 
 footer ul {
@@ -675,14 +679,14 @@ footer ul li a {
 	line-height: 36px;
 	text-align: center;
 	display: inline-block;
-	background-color: #a2cf8d;
+	background-color: var(--color-principal);
 	color: #202628;
 	border-radius: 50%;
 }
 
 footer ul li a:hover {
 	color: #202628;
-	background-color: #5c9d7d;
+	background-color: var(--color-secundario);
 	transition: all 0.5s;
 }
 
@@ -739,7 +743,7 @@ body.lb-disable-scrolling {
 
 .lb-outerContainer {
   position: relative;
-  *zoom: 1;
+  /* zoom: 1; */
   width: 250px;
   height: 250px;
   margin: 0 auto;
@@ -837,7 +841,7 @@ body.lb-disable-scrolling {
 .lb-dataContainer {
   margin: 0 auto;
   padding-top: 5px;
-  *zoom: 1;
+  /* *zoom: 1; */
   width: 100%;
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
@@ -972,4 +976,17 @@ body.lb-disable-scrolling {
 	footer ul {
 		float: none;
 	}
+}
+
+.text-white {
+	color: #fff;
+}
+
+.text-price {
+	background-color: var(--color-principal);
+    color: white;
+	font-size: 26px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
 }
